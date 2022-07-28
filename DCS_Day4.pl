@@ -75,6 +75,7 @@ sub Make_passport_hash
             $the_passport{$listified_pair[0]} = $listified_pair[1];
         }
         #Now push that k/v pair into an array, @passports.
+        #Frustrating syntax note: need to put the hash name in curly braces.
         push(@passports,{%the_passport});
         #Clear out the_passport. This one is EXTREMELY important, as the values are sticky.
         #If your passport is missing a record it will just assume that the previous one is right. It's awful.
